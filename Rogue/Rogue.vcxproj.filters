@@ -5,15 +5,18 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Components">
       <UniqueIdentifier>{13a92d6c-3ff1-4165-9f0a-ae21427ef922}</UniqueIdentifier>
     </Filter>
     <Filter Include="Systems">
       <UniqueIdentifier>{5c4d6f17-c480-43a2-b2e2-53d4deda0f73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Core">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{d6e87645-9d5a-45e3-9a78-6f6473cfc4cf}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -21,12 +24,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="TileMap.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="fileIO.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="factories.cpp">
+      <Filter>Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
-      <Filter>Header Files</Filter>
+      <Filter>Core</Filter>
     </ClInclude>
     <ClInclude Include="Position.h">
       <Filter>Components</Filter>
@@ -55,11 +67,29 @@
     <ClInclude Include="Enemy.h">
       <Filter>Components</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="EnemyMovementSystem.h">
       <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="ECS.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMap.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="fileIO.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="factories.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="TileMapCoords.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="TileData.h">
+      <Filter>Components</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

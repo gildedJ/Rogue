@@ -76,7 +76,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;$(SolutionDir)Lib\glm;$(SolutionDir)Lib\Simpleton-Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -91,7 +91,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;$(SolutionDir)Lib\glm;$(SolutionDir)Lib\Simpleton-Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -108,7 +108,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;$(SolutionDir)Lib\glm;$(SolutionDir)Lib\Simpleton-Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -127,7 +127,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Lib\SDL2\include;$(SolutionDir)Lib\SDL2_Image\include;$(SolutionDir)Lib\entt\src;$(SolutionDir)Lib\glm;$(SolutionDir)Lib\Simpleton-Engine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -139,13 +139,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="factories.cpp" />
+    <ClCompile Include="fileIO.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TileMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Acceleration.h" />
+    <ClInclude Include="ECS.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyMovementSystem.h" />
+    <ClInclude Include="factories.h" />
+    <ClInclude Include="fileIO.h" />
+    <ClInclude Include="TileMap.h" />
     <ClInclude Include="MovementSystem.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerMovementSystem.h" />
@@ -153,6 +160,8 @@
     <ClInclude Include="Position.h" />
     <ClInclude Include="RenderSystem.h" />
     <ClInclude Include="Sprite.h" />
+    <ClInclude Include="TileData.h" />
+    <ClInclude Include="TileMapCoords.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="Velocity.h" />
   </ItemGroup>

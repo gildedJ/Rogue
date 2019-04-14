@@ -1,7 +1,7 @@
 #pragma once
 
 #include "SDL.h"
-#include "entt\entity\registry.hpp"
+#include "ECS.h"
 
 #include "Acceleration.h"
 #include "Player.h"
@@ -9,7 +9,7 @@
 class PlayerMovementSystem {
 public:
 
-  static void Update(entt::registry& entityManager)
+  static void Update(EntityManager& entityManager)
   {
     const float PlayerAcceleration = 500.0f;
     float ddx = 0.0f;
@@ -37,8 +37,8 @@ public:
     for (auto entity : view)
     {
       auto& acceleration = view.get<Acceleration>(entity);
-      acceleration.Value.X = ddx;
-      acceleration.Value.Y = ddy;
+      acceleration.Value.x = ddx;
+      acceleration.Value.y = ddy;
     }
   }
 };

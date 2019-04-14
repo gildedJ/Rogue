@@ -1,6 +1,6 @@
 #pragma once
 
-#include "entt\entity\registry.hpp"
+#include "ECS.h"
 
 #include "Acceleration.h"
 #include "Velocity.h"
@@ -9,26 +9,26 @@
 
 class MovementSystem {
 public:
-  static void Update(entt::registry& entityManager, float dt)
+  static void Update(EntityManager& entityManager, float dt)
   {
     entityManager.view<Position, Velocity, Acceleration>().each([dt](auto& position, auto& velocity, auto& acceleration) {
       velocity.Value += (velocity.Value * -0.5f + acceleration.Value) * dt;
 
-      if (velocity.Value.X > velocity.Limit.X)
+      if (velocity.Value.x > velocity.Limit.x)
       {
-        velocity.Value.X = velocity.Limit.X;
+        velocity.Value.x = velocity.Limit.x;
       }
-      if (velocity.Value.X < -velocity.Limit.X)
+      if (velocity.Value.x < -velocity.Limit.x)
       {
-        velocity.Value.X = -velocity.Limit.X;
+        velocity.Value.x = -velocity.Limit.x;
       }
-      if (velocity.Value.Y > velocity.Limit.Y)
+      if (velocity.Value.y > velocity.Limit.y)
       {
-        velocity.Value.Y = velocity.Limit.Y;
+        velocity.Value.y = velocity.Limit.y;
       }
-      if (velocity.Value.Y < -velocity.Limit.Y)
+      if (velocity.Value.y < -velocity.Limit.y)
       {
-        velocity.Value.Y = -velocity.Limit.Y;
+        velocity.Value.y = -velocity.Limit.y;
       }
 
       position.Value += velocity.Value * dt;

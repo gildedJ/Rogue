@@ -1,7 +1,9 @@
 #pragma once
 
 #include "SDL.h"
-#include "entt\entity\registry.hpp"
+#include "ECS.h"
+
+#include "TileMap.h"
 
 class Game
 {
@@ -22,7 +24,8 @@ private:
   bool isRunning;
   SDL_Window* window;
   SDL_Renderer* renderer;
-  entt::registry entityManager;
-  Uint32 player;
+  EntityManager entityManager;
+  TileMap tileMap;
+  Entity player;
 };
 

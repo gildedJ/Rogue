@@ -2,12 +2,9 @@
 
 #include <iostream>
 
-#include "Player.h"
-#include "Enemy.h"
-#include "Sprite.h"
-#include "Acceleration.h"
-#include "Velocity.h"
-#include "Position.h"
+#include "factories.h"
+
+#include "TileMap.h"
 
 #include "PlayerMovementSystem.h"
 #include "EnemyMovementSystem.h"
@@ -48,20 +45,12 @@ void Game::Init(const char* title, int x, int y, int width, int height, bool ful
       std::cout << "Renderer created!" << std::endl;
     }
 
-    player = entityManager.create();
-    entityManager.assign<Position>(player, Vector2{ 50.0f, 50.0f });
-    entityManager.assign<Sprite>(player, Vector2{ 0.0f, 0.0f }, Dimension{ 50.0f, 50.0f }, Color{ 0.35f, 0.8f, 0.3f, 1.0f });
-    entityManager.assign<Velocity>(player, Vector2{ 0.0f, 0.0f }, Vector2{ 200.0f, 200.0f });
-    entityManager.assign<Acceleration>(player, Vector2{ 0.0f, 0.0f });
-    entityManager.assign<Player>(player);
+    tileMap = loadMap("test.map");
+    makeTileMap(entityManager, tileMap);
 
+    player = makePlayer(entityManager, Vector2{2, 2});
     for (int i = 0; i < 10; i++) {
-      auto enemy = entityManager.create();
-      entityManager.assign<Position>(enemy, Vector2{ i * 100.0f, 200.0f });
-      entityManager.assign<Sprite>(enemy, Vector2{ 0.0f, 0.0f }, Dimension{ 50.0f, 50.0f }, Color{ 0.8f, 0.35f, 0.2f, 1.0f });
-      entityManager.assign<Velocity>(enemy, Vector2{ 0.0f, 0.0f }, Vector2{ 150.0f, 150.0f });
-      entityManager.assign<Acceleration>(enemy, Vector2{ 0.0f, 0.0f });
-      entityManager.assign<Enemy>(enemy);
+      makeEnemy(entityManager, Vector2{ i + 3, 2 });
     }
 
     isRunning = true;
@@ -102,7 +91,9 @@ void Game::Render()
   SDL_RenderClear(renderer);
 
   // Render
-  RenderSystem::Update(entityManager, renderer);
+  RenderSystem::DrawTileMap(entityManager, renderer);
+  RenderSystem::DrawEnemies(entityManager, renderer);
+  RenderSystem::DrawPlayers(entityManager, renderer);
 
   SDL_RenderPresent(renderer);
 }

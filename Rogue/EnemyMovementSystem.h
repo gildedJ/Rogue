@@ -1,16 +1,17 @@
 #pragma once
 
 #include "SDL.h"
-#include "entt\entity\registry.hpp"
+#include "ECS.h"
 
 #include "Position.h"
 #include "Acceleration.h"
 #include "Enemy.h"
 
+
 class EnemyMovementSystem {
 public:
 
-  static void Update(entt::registry& entityManager, Vector2 playerPos)
+  static void Update(EntityManager& entityManager, Vector2 playerPos)
   {
     const float EnemyAcceleration = 350.0f;
 
@@ -20,7 +21,7 @@ public:
       auto& position = view.get<Position>(entity);
       auto& acceleration = view.get<Acceleration>(entity);
 
-      Vector2 heading = (playerPos - position.Value).normalize();
+      Vector2 heading = normalize(playerPos - position.Value);
       acceleration.Value = heading * EnemyAcceleration;
     }
   }

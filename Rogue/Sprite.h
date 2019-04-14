@@ -1,11 +1,9 @@
 #pragma once
 
-#include "SDL.h"
-
 #include "Vector.h"
 
 struct Sprite {
   Vector2 Offset;
-  Dimension Size;
+  Vector2 Size;
   Color Color;
 };
