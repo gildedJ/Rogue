@@ -1,14 +1,14 @@
 #pragma once
 
 #include "SDL.h"
-#include "ECS.h"
+#include "../Util/ECS.h"
 
-#include "TileMapCoords.h"
-#include "TileData.h"
-#include "Player.h"
-#include "Enemy.h"
-#include "Position.h"
-#include "Sprite.h"
+#include "../Components/TileMapCoords.h"
+#include "../Components/TileData.h"
+#include "../Components/Player.h"
+#include "../Components/Enemy.h"
+#include "../Components/Position.h"
+#include "../Components/Sprite.h"
 
 #include "TileMap.h"
 

@@ -18,78 +18,108 @@
     <Filter Include="Util">
       <UniqueIdentifier>{d6e87645-9d5a-45e3-9a78-6f6473cfc4cf}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{d879c5a9-9217-4233-bead-47a708416877}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{d62e4a43-3643-4cfb-aa16-16b842763953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\OpenGL">
+      <UniqueIdentifier>{0114abf0-45fb-488d-a86d-f70853ae0ef0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer\DirectX">
+      <UniqueIdentifier>{a320bc89-d88d-4d8b-a95c-ce1283b8f41a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\MacOS">
+      <UniqueIdentifier>{c61fb9c2-df40-406f-bd97-f7fb4bef92bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Linux">
+      <UniqueIdentifier>{a997e49c-5606-4a77-9968-f10fbef56885}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Switch">
+      <UniqueIdentifier>{ca91fb30-e57e-4da8-88cd-ea4004cc38a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\PS4">
+      <UniqueIdentifier>{23064ffe-1a36-47e1-ae66-b6e884b5d586}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{c8e77f54-b8f3-42e2-a921-3c2d89e9bb9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClInclude Include="src\Components\Acceleration.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Enemy.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Player.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Position.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Sprite.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\TileData.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\TileMapCoords.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Components\Velocity.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\factories.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\fileIO.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\Game.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\TileMap.h">
+      <Filter>Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\EnemyMovementSystem.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\MovementSystem.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\PlayerMovementSystem.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Systems\RenderSystem.h">
+      <Filter>Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\ECS.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Util\Vector.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Core\factories.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\fileIO.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\Game.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\TileMap.cpp">
+      <Filter>Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
-      <Filter>Core</Filter>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TileMap.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="fileIO.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="factories.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Game.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Position.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Velocity.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Acceleration.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerMovementSystem.h">
-      <Filter>Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="MovementSystem.h">
-      <Filter>Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="RenderSystem.h">
-      <Filter>Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="EnemyMovementSystem.h">
-      <Filter>Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="ECS.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector.h">
-      <Filter>Util</Filter>
-    </ClInclude>
-    <ClInclude Include="TileMap.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="fileIO.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="factories.h">
-      <Filter>Core</Filter>
-    </ClInclude>
-    <ClInclude Include="TileMapCoords.h">
-      <Filter>Components</Filter>
-    </ClInclude>
-    <ClInclude Include="TileData.h">
-      <Filter>Components</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

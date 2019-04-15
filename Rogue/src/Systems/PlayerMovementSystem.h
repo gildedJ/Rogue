@@ -1,10 +1,10 @@
 #pragma once
 
 #include "SDL.h"
-#include "ECS.h"
+#include "../Util/ECS.h"
 
-#include "Acceleration.h"
-#include "Player.h"
+#include "../Components/Acceleration.h"
+#include "../Components/Player.h"
 
 class PlayerMovementSystem {
 public:

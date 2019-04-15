@@ -1,13 +1,13 @@
 #include "factories.h"
 
-#include "Position.h"
-#include "TileMapCoords.h"
-#include "TileData.h"
-#include "Sprite.h"
-#include "Velocity.h"
-#include "Acceleration.h"
-#include "Player.h"
-#include "Enemy.h"
+#include "../Components/Position.h"
+#include "../Components/TileMapCoords.h"
+#include "../Components/TileData.h"
+#include "../Components/Sprite.h"
+#include "../Components/Velocity.h"
+#include "../Components/Acceleration.h"
+#include "../Components/Player.h"
+#include "../Components/Enemy.h"
 
 
 

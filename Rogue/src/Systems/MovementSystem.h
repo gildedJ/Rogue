@@ -1,10 +1,10 @@
 #pragma once
 
-#include "ECS.h"
+#include "../Util/ECS.h"
 
-#include "Acceleration.h"
-#include "Velocity.h"
-#include "Position.h"
+#include "../Components/Acceleration.h"
+#include "../Components/Velocity.h"
+#include "../Components/Position.h"
 
 
 class MovementSystem {

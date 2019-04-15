@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ECS.h"
-#include "Vector.h"
+#include "../Util/ECS.h"
+#include "../Util/Vector.h"
 #include "TileMap.h"
 
 Entity makePlayer(EntityManager &entityManager, Vector2 tilePos);

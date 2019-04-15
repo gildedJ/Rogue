@@ -6,10 +6,10 @@
 
 #include "TileMap.h"
 
-#include "PlayerMovementSystem.h"
-#include "EnemyMovementSystem.h"
-#include "MovementSystem.h"
-#include "RenderSystem.h"
+#include "../Systems/PlayerMovementSystem.h"
+#include "../Systems/EnemyMovementSystem.h"
+#include "../Systems/MovementSystem.h"
+#include "../Systems/RenderSystem.h"
 
 
 Game::Game()

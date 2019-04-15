@@ -1,11 +1,11 @@
 #pragma once
 
 #include "SDL.h"
-#include "ECS.h"
+#include "../Util/ECS.h"
 
-#include "Position.h"
-#include "Acceleration.h"
-#include "Enemy.h"
+#include "../Components/Position.h"
+#include "../Components/Acceleration.h"
+#include "../Components/Enemy.h"
 
 
 class EnemyMovementSystem {
